@@ -4,4 +4,8 @@ export class TodoModel{
     constructor(public title: string = ""){
         
     }
+    
+    toggle(){
+        this.status = this.status == "started" ? "completed" : "started"; 
+    }
 }
