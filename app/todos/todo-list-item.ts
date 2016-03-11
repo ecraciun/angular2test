@@ -39,7 +39,7 @@ export class TodoListItem {
     
     onSubmit(){
         console.log(`List item button was clicked with ${this.todoModel}`);
-        this.todoService.todos.push(this.todoModel);
+        this.todoService.addTodo(this.todoModel);
         console.log(this.todoService);
         this.todoModel = new TodoModel();
     }
