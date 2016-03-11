@@ -4,8 +4,13 @@ import {TodoService}  from './todo-service'
 @Component({
     selector: 'todo-item-renderer',
     template: `
+    <style>
+        .completed{
+            text-decoration: line-through;
+        }
+    </style>
     <div>
-        <span [hidden]="todo.status == 'completed'">{{todo.title}}</span> <!--[contentEditable]-->
+        <span [ngClass]="todo.status">{{todo.title}}</span> <!--[contentEditable]-->
         <button (click)="todo.toggle()">Toggle</button>
     </div>`
 })
