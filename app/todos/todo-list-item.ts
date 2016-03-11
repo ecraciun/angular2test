@@ -9,7 +9,7 @@ import {TodoService}  from './todo-service'
         
         <!--<input type="text" #myInput />
         <button (click)="onClick($event, myInput.value)">Click me</button>-->
-        <form (submit)="onClick">        
+        <form (submit)="onSubmit()">        
             <input type="text" [(ngModel)]="todoModel" />
         </form>
     </li>`
@@ -36,9 +36,10 @@ export class TodoListItem {
     //     console.log(this.todoService);
     // }
     
-    onClick(){
+    onSubmit(){
         console.log(`List item button was clicked with ${this.todoModel}`);
         this.todoService.todos.push(this.todoModel);
         console.log(this.todoService);
+        this.todoModel = "";
     }
 }
