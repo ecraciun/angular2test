@@ -6,7 +6,7 @@ import {TodoService}  from './todo-service'
     template: `
     <ul>
         <li *ngFor="#todo of todoService.todos">
-            {{todo}}
+            {{todo.title}}
         </li>
     </ul>
     <div>{{todoService | json}}</div>
