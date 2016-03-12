@@ -1,8 +1,8 @@
 import {Component} from 'angular2/core';
-import {TodoListItem} from './todos/todo-list-item';
-import {TodoList} from './todos/todo-list';
-import {StatusSelector} from './todos/status-selector';
-import {SearchBox} from './todos/search-box';
+import {TodoListItem} from './todos/todo/components/todo-list-item';
+import {TodoList} from './todos/todo/components/todo-list';
+import {StatusSelector} from './todos/todo/components/status-selector';
+import {SearchBox} from './todos/search/components/search-box';
 
 @Component({
     selector: 'my-app',

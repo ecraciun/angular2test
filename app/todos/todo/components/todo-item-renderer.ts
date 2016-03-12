@@ -1,5 +1,5 @@
 import {Component, Input, Output, EventEmitter} from 'angular2/core';
-import {TodoService}  from './todo-service'
+import {TodoService}  from '../services/todo-service'
 import {ViewEncapsulation} from 'angular2/core';
 
 @Component({
