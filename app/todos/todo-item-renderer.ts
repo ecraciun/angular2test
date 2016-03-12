@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input, Output, EventEmitter} from 'angular2/core';
 import {TodoService}  from './todo-service'
 import {ViewEncapsulation} from 'angular2/core';
 
@@ -15,9 +15,10 @@ import {ViewEncapsulation} from 'angular2/core';
     </style>
     <div>
         <span [ngClass]="todo.status">{{todo.title}}</span> <!--[contentEditable]-->
-        <button (click)="todo.toggle()">Toggle</button>
+        <button (click)="toggle.emit(todo)">Toggle</button>
     </div>`
 })
 export class TodoItemRenderer { 
     @Input() todo;
+    @Output() toggle = new EventEmitter(); 
 }
