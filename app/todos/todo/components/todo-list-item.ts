@@ -4,16 +4,7 @@ import {TodoModel} from '../services/TodoModel';
 
 @Component({
     selector: 'todo-list-item',
-    template: `
-    <li>
-        <div>{{message}}</div>
-        
-        <!--<input type="text" #myInput />
-        <button (click)="onClick($event, myInput.value)">Click me</button>-->
-        <form (submit)="onSubmit()">        
-            <input type="text" [(ngModel)]="todoModel.title" />
-        </form>
-    </li>`
+    templateUrl: '/app/todos/todo/components/todo-list-item.html'
 })
 export class TodoListItem { 
     constructor(public todoService: TodoService){
