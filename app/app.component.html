@@ -1,4 +1,23 @@
-<h1>My First Angular 2 App</h1>
+<link href="/app/app.component.css" rel="stylesheet"/>
+
+<h1>{{title}}</h1>
+
+
+<ul class="heroes">
+  <li   *ngFor="#hero of heroes" 
+        (click)="onSelect(hero)"
+        [class.selected]="hero === selectedHero">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedHero">
+    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
+</div>
+    
+    
+<hr/>
+<h1>From egghead.io</h1>    
     
 <search-box (update)="term = $event"></search-box>
 
