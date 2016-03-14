@@ -7,9 +7,9 @@ import { Router }               from 'angular2/router';
 
 @Component({
     selector: 'my-heroes',
-    styleUrls: ['/app/heroes/components/heroes.component.css'], // THIS IS NOT WORKING!!! the only one, and I do not know why.....
     directives: [HeroDetailComponent],
-    templateUrl: '/app/heroes/components/heroes.component.html'
+    templateUrl: '/app/heroes/components/heroes.component.html',
+    styleUrls: ['/app/heroes/components/heroes.component.css'] // THIS IS NOT WORKING!!! the only one, and I do not know why.....
 })
 export class HeroesComponent implements OnInit { 
     constructor(private _router: Router, 
