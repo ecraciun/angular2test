@@ -1,6 +1,12 @@
+<link href="/app/app.component.css" rel="stylesheet"/>
+
 <h1>{{title}}</h1>
 
-<my-heroes></my-heroes>
+<nav>
+    <a [routerLink]="['Dashboard']">Dashboard</a>
+    <a [routerLink]="['Heroes']">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
 
 <hr/>
 <h1>From egghead.io</h1>    
