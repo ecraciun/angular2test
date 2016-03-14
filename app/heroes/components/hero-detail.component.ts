@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {Hero} from '../models/Hero';
+import {Component}      from 'angular2/core';
+import {Hero}           from '../models/Hero';
 
 @Component({
     selector: 'my-hero-detail',
