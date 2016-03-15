@@ -1,8 +1,5 @@
 import {Component}              from 'angular2/core';
-import {TodoListItem}           from './todos/todo/components/todo-list-item';
-import {TodoList}               from './todos/todo/components/todo-list';
-import {StatusSelector}         from './todos/todo/components/status-selector';
-import {SearchBox}              from './todos/search/components/search-box';
+import {EggheadComponent}       from './todos/egghead.component';
 import {HeroesComponent}        from './heroes/components/heroes.component';
 import {HeroService}            from './heroes/services/hero.service';
 import {DashboardComponent}     from './dashboard.component';
@@ -12,7 +9,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS }     from 'angular2/r
 
 @Component({
     selector: 'my-app',
-    directives: [TodoListItem, TodoList, StatusSelector, SearchBox, ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES],
     templateUrl: '/app/app.component.html',
     styleUrls: ['app/app.component.css'],
     providers: [HeroService, ROUTER_PROVIDERS]
@@ -33,6 +30,11 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS }     from 'angular2/r
         name: 'Dashboard',
         component: DashboardComponent,
         useAsDefault: true
+    },
+    {
+        path: '/egghead',
+        name: 'Egghead.IO',
+        component: EggheadComponent
     }
 ])
 export class AppComponent { 

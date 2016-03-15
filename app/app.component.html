@@ -5,19 +5,6 @@
 <nav>
     <a [routerLink]="['Dashboard']">Dashboard</a>
     <a [routerLink]="['Heroes']">Heroes</a>
+    <a [routerLink]="['Egghead.IO']">Egghead.IO</a>
 </nav>
 <router-outlet></router-outlet>
-
-<hr/>
-<h1>From egghead.io</h1>    
-    
-<search-box (update)="term = $event"></search-box>
-
-<todo-list-item></todo-list-item>
-
-
-<status-selector (select)="status = $event"></status-selector>
-
-<todo-list  [status]="status"
-            [term]="term">
-</todo-list>

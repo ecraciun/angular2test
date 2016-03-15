@@ -1,9 +1,10 @@
-<li>
-    <div>{{message}}</div>
+<div>
+    <!--<div>{{message}}</div>-->
     
     <!--<input type="text" #myInput />
     <button (click)="onClick($event, myInput.value)">Click me</button>-->
-    <form (submit)="onSubmit()">        
-        <input type="text" [(ngModel)]="todoModel.title" />
+    <form (submit)="onSubmit()">       
+        <label for="name">Add new</label> 
+        <input name="name" type="text" [(ngModel)]="todoModel.title" />
     </form>
-</li>
+</div>

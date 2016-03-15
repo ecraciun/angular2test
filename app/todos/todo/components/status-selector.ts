@@ -4,6 +4,7 @@ import {Component, Output, EventEmitter} from 'angular2/core';
     selector: 'status-selector',
     template: `
     <div>
+        <label>Status</label>
         <select #sel (change)="select.emit(sel.value)">
             <option *ngFor="#status of statuses"> {{status}} </option>
         </select>

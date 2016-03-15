@@ -4,6 +4,7 @@ import {Component, Output, EventEmitter} from 'angular2/core';
     selector: 'search-box',
     template: `
     <div>
+        <label>Search</label>
         <input #input type="text" (input)="update.emit(input.value)" />
     </div>`
 })
